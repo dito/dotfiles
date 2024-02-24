@@ -1,0 +1,19 @@
+[user]
+  name = dito
+  email = daisuke3@proton.me
+[alias]
+  st = status
+  gl = log --oneline --decorate --graph
+  delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+[branch]
+  autosetuprebase = always
+[fetch]
+  prune = true
+[init]
+  defaultBranch = main
+[pull]
+  rebase = true
+[push]
+  default = current
+[rebase]
+  autosquash = true
