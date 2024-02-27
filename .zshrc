@@ -7,7 +7,13 @@ autoload -Uz compinit && compinit
 # export LANG=ja_JP.UTF-8
 # export LC_ALL=ja_JP.UTF-8
 
-alias ll='ls -l'
+# aliases
+alias ls='exa -F -a'
+alias ll='exa -l'
+alias cat='bat'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
 
 function git_commit_with_arguments_message() {
   git commit --message "$*"
