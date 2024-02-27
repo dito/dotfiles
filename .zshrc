@@ -7,6 +7,16 @@ autoload -Uz compinit && compinit
 # export LANG=ja_JP.UTF-8
 # export LC_ALL=ja_JP.UTF-8
 
+# prompt
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:*' formats '%F{green}%b%f'
+zstyle ':vcs_info:*' actionformats '%F{green}%b%f(%F{red}%a%f)'
+function precmd() {
+  vcs_info
+}
+PROMPT='${vcs_info_msg_0_}:%~/%% '
+
 # aliases
 alias ls='exa -F -a'
 alias ll='exa -l'
