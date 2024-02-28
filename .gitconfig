@@ -2,6 +2,7 @@
   name = dito
   email = daisuke3@proton.me
 [alias]
+  co = checkout
   st = status
   gl = log --oneline --decorate --graph
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
